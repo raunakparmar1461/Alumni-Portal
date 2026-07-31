@@ -1,0 +1,504 @@
+body{
+     margin:0;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
+        url("clg2.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+.head{
+    position:relative;
+    background:rgba(214, 207, 207, 0.818);
+    color:rgb(213,26,26);
+    font-size:45px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:bold;
+
+    text-align:center;
+    padding:18px 0;
+    margin:0;
+}
+.p{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px; 
+    animation: slideIn 2s ease-out;
+}
+@keyframes slideIn{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.logo{
+    position:absolute;
+    left:30px;          
+    top:50%;
+    transform:translateY(-50%);
+
+    width:80px;
+    height:80px;
+}
+
+.navbar{
+    background: #111;
+    padding: 15px 30px;
+    display: flex;
+    gap: 150px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color:rgb(213,26,26);
+}
+
+.d{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+/* ===========================
+   SEARCH SECTION
+=========================== */
+
+.search-section{
+    width:95%;
+    max-width:1300px;
+    margin:70px auto;
+    animation: slideIn 1s ease-out;
+}
+@keyframes slideIn{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.search-container{
+
+    background:#161818;
+
+    padding:18px 25px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.search-input{
+
+    display:flex;
+
+    align-items:center;
+
+    width:90%;
+
+    margin:auto;
+
+    background:white;
+
+    border:2px solid #0e0d0d;
+
+    border-radius:14px;
+
+    padding:10px 18px;   /* Reduced from 18px/20px */
+
+    height:38px;          /* Fixed height */
+
+}
+
+.search-input span{
+    font-size:20px;
+    color:#2c2929;
+}
+
+.search-input input{
+
+    width:95%;
+
+    border:none;
+
+
+
+    outline:none;
+
+    background:transparent;
+
+    margin-left:12px;
+
+    font-size:16px;
+
+}
+
+.dropdowns{
+
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    margin-top:30px;
+    flex-wrap:wrap;
+
+}
+
+.drop{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.drop label{
+
+    font-size:22px;
+    font-weight:bold;
+    color:#f8330c;
+
+}
+
+.drop select{
+    width:180px;
+    height:45px;
+    padding:0 18px;
+    font-size:15px;
+    font-weight:500;
+    color:#222;
+
+    border:2px solid #d9d9d9;
+    border-radius:15px;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.branch-buttons{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+
+}
+
+.branch-buttons button{
+
+    padding:8px 20px;
+
+    min-width:70px;
+
+    height:42px;
+
+    border-radius:22px;
+
+    border:1px solid #d9d9d9;
+
+    background:white;
+
+    color:#222;
+
+    font-size:10px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:all 0.3s ease;
+
+}
+
+.branch-buttons button:hover{
+
+    background:#0057B8;
+    color:white;
+
+}
+
+.branch-buttons .active{
+
+    background:#0057B8;
+    color:white;
+
+}
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:30px;
+
+}
+
+.card{
+
+    width:340px;
+    max-width:340px;
+
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card h2{
+
+    color:#0057B8;
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    margin:8px 0;
+    font-size:17px;
+
+}
+
+.card button{
+
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#0057B8;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+
+}
+
+.card button:hover{
+
+    background:#003f88;
+
+}
+
+.search-section{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:70px auto;
+
+}
+
+.search-container{
+
+    background:rgb(62, 59, 59);
+
+    padding:20px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
+
+.search-input{
+
+    display:flex;
+
+    align-items:center;
+
+    border:2px solid #d41d1d;
+
+    border-radius:15px;
+
+    padding:6px 10px;
+
+    background:rgb(236, 232, 232);
+    width: 90%;
+    margin: auto;
+
+}
+
+.search-input input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    margin-left:12px;
+
+    font-size:16px;
+
+}
+
+.dropdowns{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:60px;
+
+    margin-top:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.branch-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+.branch-buttons button{
+
+    padding:10px 24px;
+
+    border-radius:30px;
+
+    border:1px solid #ddd;
+
+    background:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+.branch-buttons button.active{
+
+    background:#0057B8;
+
+    color:white;
+
+}
+
+.cards{
+
+    margin-top:60px;
+
+}
+
+.search-input:focus-within{
+    border-color:#0057B8;
+    box-shadow:0 0 8px rgba(0,87,184,0.2);
+}
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:50px 0;
+
+}
+
+/* Previous & Next buttons only */
+#prevBtn,
+#nextBtn{
+
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    background:#0057B8;
+    color:white;
+    cursor:pointer;
+
+}
+
+.page-number{
+
+    padding:10px 18px;
+    border:2px solid #0057B8;
+    border-radius:8px;
+    background:white;
+    color:#0057B8;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+
+.page-number:hover{
+
+    background:#dcecff;
+
+}
+
+.page-number.active{
+
+    background:#ff5722;
+    color:white;
+    border-color:#ff5722;
+
+}
+
+#alumni-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+
+.no-results{
+    width:100%;
+    text-align:center;
+    font-size:36px;
+    font-weight:bold;
+    color:white;
+    margin:60px 0;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.8);
+}
