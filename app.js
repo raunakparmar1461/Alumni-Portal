@@ -1,7 +1,7 @@
 let alumniData = [];
 let currentBranch = "All";
 
-const recordsPerPage = 12;
+const recordsPerPage = 6;
 let currentPage = 1;
 let filteredData = [];
 
@@ -152,7 +152,46 @@ function createPagination(totalRecords) {
 
     pageNumbers.innerHTML = "";
 
-    for (let i = 1; i <= totalPages; i++) {
+    // If there are no pages
+    if (totalPages === 0) {
+        return;
+    }
+
+    // Decide which page numbers to show
+    let startPage = Math.max(1, currentPage - 2);
+    let endPage = Math.min(totalPages, currentPage + 2);
+
+
+    // =========================
+    // First page
+    // =========================
+
+    if (startPage > 1) {
+
+        pageNumbers.innerHTML += `
+            <button
+                class="page-number"
+                onclick="goToPage(1)">
+                1
+            </button>
+        `;
+
+        // Show dots
+        if (startPage > 2) {
+
+            pageNumbers.innerHTML += `
+                <span class="page-dots">...</span>
+            `;
+
+        }
+    }
+
+
+    // =========================
+    // Nearby pages
+    // =========================
+
+    for (let i = startPage; i <= endPage; i++) {
 
         pageNumbers.innerHTML += `
 
@@ -166,6 +205,37 @@ function createPagination(totalRecords) {
 
         `;
     }
+
+
+    // =========================
+    // Last page
+    // =========================
+
+    if (endPage < totalPages) {
+
+        if (endPage < totalPages - 1) {
+
+            pageNumbers.innerHTML += `
+                <span class="page-dots">...</span>
+            `;
+
+        }
+
+        pageNumbers.innerHTML += `
+            <button
+                class="page-number"
+                onclick="goToPage(${totalPages})">
+
+                ${totalPages}
+
+            </button>
+        `;
+    }
+
+
+    // =========================
+    // Previous / Next
+    // =========================
 
     document.getElementById("prevBtn").disabled =
         currentPage === 1;

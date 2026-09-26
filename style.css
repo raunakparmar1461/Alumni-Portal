@@ -1,26 +1,42 @@
-body{
-     margin:0;
+body {
+    margin: 0;
 
     background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
         url("clg2.png");
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-.head{
-    position:relative;
-    background:rgba(214, 207, 207, 0.818);
-    color:rgb(213,26,26);
-    font-size:45px;
-    font-family:'Times New Roman', Times, serif;
-    font-weight:bold;
 
-    text-align:center;
-    padding:18px 0;
-    margin:0;
+.head {
+    position: relative;
+
+    background: rgba(0,0,0,0.5);
+
+    color: rgb(213, 26, 26);
+
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+    text-align: center;
+
+    padding: 25px 0;
+    margin: 0;
+
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
 }
 .p{
     color: white;
@@ -41,21 +57,37 @@ body{
     }
 }
 
-.logo{
-    position:absolute;
-    left:30px;          
-    top:50%;
-    transform:translateY(-50%);
 
-    width:80px;
-    height:80px;
+.logo {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 75px;
+    height: 75px;
+
+    object-fit: contain;
+
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+
+    z-index: 100;
 }
 
-.navbar{
+.navbar {
     background: #111;
-    padding: 15px 30px;
+
+    padding: 15px 40px;
+
     display: flex;
-    gap: 150px;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
 }
 
 .navbar a{
@@ -324,7 +356,7 @@ body{
 
 .search-container{
 
-    background:rgb(62, 59, 59);
+    background:rgb(0,0,0,0.5);
 
     padding:20px;
 
@@ -501,4 +533,175 @@ body{
     color:white;
     margin:60px 0;
     text-shadow:2px 2px 8px rgba(0,0,0,0.8);
+}
+.about-section {
+    padding: 70px 8%;
+
+    /* Transparent black */
+    background: rgba(0,0,0,0.5);
+
+    position: relative;
+    color: white;
+}
+
+.about-wrapper {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.3fr;
+    gap: 100px;
+
+    align-items: start;
+}
+
+/* LEFT */
+
+.about-left {
+    padding-top: 5px;
+}
+
+.about-label {
+    color: #e3262e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.about-left h2 {
+    margin-top: 18px;
+
+    font-size: 46px;
+    line-height: 1.15;
+
+    color: #ffffff;
+    font-weight: 700;
+}
+.about-left span{
+    font-size: 20px;
+}
+
+
+/* RIGHT */
+
+.about-right {
+    padding-top: 5px;
+}
+
+.about-right p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #bdbdbd;
+
+    margin: 0 0 22px;
+}
+
+.about-intro {
+    font-size: 20px !important;
+    color: #eeeeee !important;
+    line-height: 1.7 !important;
+    font-weight: 500;
+}
+
+
+/* LINE */
+
+.about-line {
+    width: 100%;
+    height: 1px;
+    background: #3a3a3a;
+    margin: 35px 0;
+}
+
+
+/* STATS */
+
+.about-stats {
+    display: flex;
+    gap: 70px;
+}
+
+.about-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-stats strong {
+    font-size: 30px;
+    color: #e3262e;
+}
+
+.about-stats span {
+    margin-top: 5px;
+
+    font-size: 13px;
+    color: #999;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .about-section {
+        padding: 65px 25px;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-left h2 {
+        font-size: 36px;
+    }
+
+    .about-stats {
+        gap: 35px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page-dots {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+
+    padding: 0 8px;
+
+    min-width: 20px;
+    height: 42px;
+}
+
+.directory-heading {
+    width: 100%;
+    margin: 0;
+    padding: 30px 10px;
+
+    box-sizing: border-box;
+
+    background: rgba(0,0,0,0.5);
+
+    text-align: center;
+}
+
+.directory-heading h2 {
+    margin: 0;
+
+    color: #e3262e !important;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 42px;
+    font-weight: bold;
 }
