@@ -207,12 +207,11 @@ body {
 
 }
 
-.drop label{
+.drop label {
+    font-size: 20px;
+    font-weight: bold;
 
-    font-size:22px;
-    font-weight:bold;
-    color:#f8330c;
-
+    color: #D71920;
 }
 
 .drop select{
@@ -233,55 +232,7 @@ body {
     box-shadow:0 4px 10px rgba(0,0,0,.08);
 }
 
-.branch-buttons{
 
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:20px;
-
-}
-
-.branch-buttons button{
-
-    padding:8px 20px;
-
-    min-width:70px;
-
-    height:42px;
-
-    border-radius:22px;
-
-    border:1px solid #d9d9d9;
-
-    background:white;
-
-    color:#222;
-
-    font-size:10px;
-
-    font-weight:500;
-
-    cursor:pointer;
-
-    transition:all 0.3s ease;
-
-}
-
-.branch-buttons button:hover{
-
-    background:#0057B8;
-    color:white;
-
-}
-
-.branch-buttons .active{
-
-    background:#0057B8;
-    color:white;
-
-}
 
 .cards{
 
@@ -291,28 +242,32 @@ body {
 
 }
 
-.card{
+.card {
+    width: 340px;
+    max-width: 340px;
 
-    width:340px;
-    max-width:340px;
+    background: #eeeeee;
 
-    background:white;
-    border-radius:20px;
-    padding:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-    transition:.3s;
+    border-radius: 18px;
 
+    padding: 25px;
+
+    border-top: 4px solid #B91C24;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
 }
 
-.card:hover{
+.card:hover {
+    transform: translateY(-8px);
 
-    transform:translateY(-10px);
-
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
 .card h2{
 
-    color:#0057B8;
+    color:#333;
     margin-bottom:15px;
 
 }
@@ -324,24 +279,29 @@ body {
 
 }
 
-.card button{
+.card button {
+    margin-top: 15px;
 
-    margin-top:15px;
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    background:#0057B8;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
+    width: 100%;
 
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #B91C24;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
-.card button:hover{
-
-    background:#003f88;
-
+.card button:hover {
+    background: #B51218;
 }
 
 .search-section{
@@ -414,42 +374,47 @@ body {
 
 }
 
-.branch-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin-top:25px;
-
+.branch-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
 }
 
-.branch-buttons button{
+.branch-buttons button {
+    padding: 10px 24px;
 
-    padding:10px 24px;
+    min-width: 75px;
+    height: 45px;
 
-    border-radius:30px;
+    border-radius: 25px;
 
-    border:1px solid #ddd;
+    border: 1px solid #ccc;
 
-    background:white;
+    background: white;
+    color: #333;
 
-    font-size:18px;
+    font-size: 16px;
+    font-weight: 600;
 
-    cursor:pointer;
+    cursor: pointer;
 
+    transition: all 0.3s ease;
 }
 
-.branch-buttons button.active{
+.branch-buttons button:hover {
+    background: #D71920;
+    color: white;
+    border-color: #D71920;
 
-    background:#0057B8;
+    transform: translateY(-2px);
+}
 
-    color:white;
-
+.branch-buttons button.active {
+    background: #B91C24;
+    color: white;
+    border-color: #D71920;
 }
 
 .cards{
@@ -458,62 +423,70 @@ body {
 
 }
 
-.search-input:focus-within{
-    border-color:#0057B8;
-    box-shadow:0 0 8px rgba(0,87,184,0.2);
+.search-input:focus-within {
+    border-color: #D71920;
+
+    box-shadow:
+        0 0 10px rgba(215, 25, 32, 0.25);
 }
 
-.pagination{
+.pagination {
+    display: flex;
 
-    display:flex;
+    justify-content: center;
+    align-items: center;
 
-    justify-content:center;
+    gap: 8px;
 
-    align-items:center;
-
-    gap:12px;
-
-    margin:50px 0;
-
+    margin: 50px 0;
 }
 
-/* Previous & Next buttons only */
 #prevBtn,
-#nextBtn{
+#nextBtn {
+    padding: 10px 18px;
 
-    padding:10px 18px;
-    border:none;
-    border-radius:8px;
-    background:#0057B8;
-    color:white;
-    cursor:pointer;
+    border: none;
+    border-radius: 8px;
 
+    background: #B91C24;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 600;
 }
 
-.page-number{
-
-    padding:10px 18px;
-    border:2px solid #0057B8;
-    border-radius:8px;
-    background:white;
-    color:#0057B8;
-    cursor:pointer;
-    font-weight:bold;
-
+#prevBtn:hover,
+#nextBtn:hover {
+    background: #B51218;
 }
 
-.page-number:hover{
+.page-number {
+    min-width: 45px;
+    height: 42px;
 
-    background:#dcecff;
+    padding: 0 12px;
 
+    border: 2px solid #D71920;
+    border-radius: 8px;
+
+    background: white;
+    color: #D71920;
+
+    cursor: pointer;
+
+    font-weight: bold;
 }
 
-.page-number.active{
+.page-number:hover {
+    background: #FDE8E9;
+}
 
-    background:#ff5722;
-    color:white;
-    border-color:#ff5722;
+.page-number.active {
+    background: #D71920;
+    color: white;
 
+    border-color: #D71920;
 }
 
 #alumni-container {
@@ -690,7 +663,7 @@ html {
 
     box-sizing: border-box;
 
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.65);
 
     text-align: center;
 }
