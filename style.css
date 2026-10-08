@@ -108,7 +108,7 @@ body {
 }
 
 .navbar {
-    background: #111;
+    background: #d71920;
 
     padding: 15px 40px;
 
@@ -128,7 +128,7 @@ body {
 }
 
 .navbar a:hover{
-    color:rgb(213,26,26);
+    color: #111;
 }
 
 .d {
