@@ -1,7 +1,7 @@
 let alumniData = [];
 let currentBranch = "All";
 
-const recordsPerPage = 6;
+const recordsPerPage = 3;
 let currentPage = 1;
 let filteredData = [];
 
